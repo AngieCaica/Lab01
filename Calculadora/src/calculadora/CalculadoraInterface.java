@@ -482,6 +482,11 @@ public class CalculadoraInterface extends javax.swing.JFrame {
 
     private void btnpotencia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpotencia2ActionPerformed
         // TODO add your handling code here:
+        contenido=txtmostrar.getText();
+        if(contenido.length()>0){
+            resultado=Math.pow(Double.parseDouble(contenido),2);
+            txtmostrar.setText(resultado.toString());
+        }
     }//GEN-LAST:event_btnpotencia2ActionPerformed
 
     private void btnsumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsumaActionPerformed
@@ -542,6 +547,11 @@ public class CalculadoraInterface extends javax.swing.JFrame {
 
     private void btneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneActionPerformed
         // TODO add your handling code here:
+        contenido=txtmostrar.getText();
+        if(contenido.length()>0){
+            resultado=Math.exp(Double.parseDouble(contenido));
+            txtmostrar.setText(resultado.toString());
+        }
     }//GEN-LAST:event_btneActionPerformed
 
     private void btnSenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSenActionPerformed

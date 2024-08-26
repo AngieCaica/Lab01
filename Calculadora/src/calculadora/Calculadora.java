@@ -43,7 +43,7 @@ public class Calculadora {
                 case 4:
                     operar(scanner, "dividir");
                     break;
-                case 5:
+                /*case 5:
                     razones(scanner, "coseno");
                     break;
                 case 6:
@@ -54,7 +54,7 @@ public class Calculadora {
                     break;
                 case 8:
                     calcularIVA(scanner);
-                    break;
+                    break;*/
                 /*case 9:
                     calcularRaiz(scanner);
                     break;
@@ -62,7 +62,7 @@ public class Calculadora {
                     calcularPotencia(scanner);
                     break;*/
                 case 0:
-                    System.out.println("Saliendo...");
+                    System.out.println("Va a salir del menu");
                     break;
                 default:
                     System.out.println("Opción no válida");
@@ -102,39 +102,6 @@ public class Calculadora {
                 break;
         }
         System.out.println("Resultado: " + resultado);
-    }
-
-  private static void razones(Scanner scanner, String funcion) {
-        System.out.println("Ingrese el ángulo en grados: ");
-        double grados = scanner.nextDouble();
-        double radianes = Math.toRadians(grados);
-
-        double resultado = 0;
-        switch (funcion) {
-            case "coseno":
-                resultado = Math.cos(radianes);
-                break;
-            case "seno":
-                resultado = Math.sin(radianes);
-                break;
-            case "tangente":
-                resultado = Math.tan(radianes);
-                break;
-        }
-        System.out.println("Resultado: " + resultado);
-    }
-
-    private static void calcularIVA(Scanner scanner) {
-        System.out.print("Ingrese el monto sin IVA: ");
-        double monto = scanner.nextDouble();
-        System.out.print("Ingrese el porcentaje de IVA: ");
-        double porcentajeIVA = scanner.nextDouble();
-
-        double iva = (monto * porcentajeIVA) / 100;
-        double total = monto + iva;
-
-        System.out.println("IVA: " + iva);
-        System.out.println("Total con IVA: " + total);
     }
 }
     

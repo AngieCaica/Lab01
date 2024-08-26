@@ -70,8 +70,18 @@ public class CalculadoraInterface extends javax.swing.JFrame {
         txtmostrar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         btnCos.setText("Cos");
+        btnCos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCosActionPerformed(evt);
+            }
+        });
 
         btnTan.setText("Tan");
+        btnTan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTanActionPerformed(evt);
+            }
+        });
 
         btnraiz.setText("raiz");
         btnraiz.addActionListener(new java.awt.event.ActionListener() {
@@ -144,6 +154,11 @@ public class CalculadoraInterface extends javax.swing.JFrame {
         });
 
         btnIva.setText("IVA");
+        btnIva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIvaActionPerformed(evt);
+            }
+        });
 
         btne.setText("e^x");
         btne.addActionListener(new java.awt.event.ActionListener() {
@@ -419,6 +434,8 @@ public class CalculadoraInterface extends javax.swing.JFrame {
             resultadocalc=Double.parseDouble(valor1)/Double.parseDouble(valor2);
         }else if(signo.equals("x^y")){
             resultadocalc=Math.pow(Double.parseDouble(valor1), Double.parseDouble(valor2));
+        }else if(signo.equals("IVA")){
+              resultadocalc=Double.parseDouble(valor1)*Double.parseDouble(valor2)/100;
         }
         respuesta=resultadocalc.toString();
         return respuesta;
@@ -556,7 +573,11 @@ public class CalculadoraInterface extends javax.swing.JFrame {
 
     private void btnSenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSenActionPerformed
         // TODO add your handling code here:
-       
+       contenido=txtmostrar.getText();
+        if(contenido.length()>0){
+            resultado=Math.sin(Double.parseDouble(contenido));
+            txtmostrar.setText(resultado.toString());
+        }
     }//GEN-LAST:event_btnSenActionPerformed
 
     private void btnfraccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfraccionActionPerformed
@@ -566,7 +587,36 @@ public class CalculadoraInterface extends javax.swing.JFrame {
             resultado=1/(Double.parseDouble(contenido));
             txtmostrar.setText(resultado.toString());
         }
+        
     }//GEN-LAST:event_btnfraccionActionPerformed
+
+    private void btnCosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCosActionPerformed
+        // TODO add your handling code here:
+        contenido=txtmostrar.getText();
+        if(contenido.length()>0){
+            resultado=Math.cos(Double.parseDouble(contenido));
+            txtmostrar.setText(resultado.toString());
+        }
+    }//GEN-LAST:event_btnCosActionPerformed
+
+    private void btnTanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTanActionPerformed
+        // TODO add your handling code here:
+        contenido=txtmostrar.getText();
+        if(contenido.length()>0){
+            resultado=Math.tan(Double.parseDouble(contenido));
+            txtmostrar.setText(resultado.toString());
+        }
+    }//GEN-LAST:event_btnTanActionPerformed
+
+    private void btnIvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIvaActionPerformed
+        // TODO add your handling code here:
+       if(!txtmostrar.getText().equals("")){
+            valor1=txtmostrar.getText();
+            signo="+";
+            txtmostrar.setText("");
+       }
+
+    }//GEN-LAST:event_btnIvaActionPerformed
 
     /**
      * @param args the command line arguments

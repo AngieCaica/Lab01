@@ -192,11 +192,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Cos"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCosActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnTan">
           <Properties>
             <Property name="text" type="java.lang.String" value="Tan"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTanActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnraiz">
           <Properties>
@@ -282,6 +288,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="IVA"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnIvaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btne">
           <Properties>
